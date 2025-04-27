@@ -1,0 +1,3 @@
+[submodule "deps/Onigmo"]
+	path = deps/Onigmo
+	url = https://github.com/textmate/Onigmo/
