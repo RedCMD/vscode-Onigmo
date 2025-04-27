@@ -1,9 +1,9 @@
 # https://github.com/emscripten-core/emscripten/blob/master/src/settings.js
 
 emcc -O2 \
-    deps/oniguruma/src/.libs/libonig.so \
+    deps/Onigmo/src/.libs/libonig.so \
     src/onig.cc \
-    -Isrc -Ideps/oniguruma/src \
+    -Isrc -Ideps/Onigmo/src \
     -o out/onig.js \
     -s ENVIRONMENT=shell \
     -s FILESYSTEM=0 \

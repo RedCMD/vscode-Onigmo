@@ -1,7 +1,7 @@
 {
-  "name": "vscode-oniguruma",
+  "name": "vscode-onigmo",
   "version": "2.0.1",
-  "description": "VSCode oniguruma bindings",
+  "description": "VSCode Onigmo bindings",
   "author": {
     "name": "Microsoft Corporation"
   },
@@ -9,15 +9,15 @@
   "typings": "main.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/microsoft/vscode-oniguruma"
+    "url": "https://github.com/RedCMD/vscode-Onigmo"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/microsoft/vscode-oniguruma/issues"
+    "url": "https://github.com/RedCMD/vscode-Onigmo/issues"
   },
   "scripts": {
     "test": "mocha --ui=tdd ./out/test/index.test.js",
-    "build-onig": "cd deps/oniguruma && autoreconf -vfi && emconfigure ./configure && make clean && emmake make",
+    "build-onig": "cd deps/Onigmo && autoreconf -vfi && emconfigure ./configure && make clean && emmake make",
     "build-wasm": "./scripts/build.sh",
     "build-tsc": "tsc -p tsconfig.json",
     "watch-tsc": "tsc -w -p tsconfig.json",
