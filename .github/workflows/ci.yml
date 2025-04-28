@@ -35,3 +35,4 @@ jobs:
           node ./scripts/cp ./release/onig.wasm ./Onigmo.wasm
           git add Onigmo.wasm
           git diff-index --quiet HEAD || git commit -m "Update Onigmo.wasm"
+          git push
