@@ -43,10 +43,10 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Licenses
-[MIT](https://github.com/microsoft/vscode-oniguruma/blob/master/LICENSE.txt) microsoft/vscode-oniguruma
-[MIT](https://github.com/textmate/Onigmo?tab=License-1-ov-file) textmate/Onigmo
-[MIT](https://github.com/k-takata/Onigmo?tab=License-1-ov-file) k-takata/Onigmo
-[MIT](https://github.com/kkos/oniguruma?tab=License-1-ov-file) kkos/oniguruma
+* [MIT](https://github.com/microsoft/vscode-oniguruma/blob/master/LICENSE.txt) microsoft/vscode-oniguruma
+* [MIT](https://github.com/textmate/Onigmo?tab=License-1-ov-file) textmate/Onigmo
+* [MIT](https://github.com/k-takata/Onigmo?tab=License-1-ov-file) k-takata/Onigmo
+* [MIT](https://github.com/kkos/oniguruma?tab=License-1-ov-file) kkos/oniguruma
 
 This project incorporates material from other projects. Please see [NOTICES.txt](https://github.com/microsoft/vscode-oniguruma/blob/master/NOTICES.txt)
 
