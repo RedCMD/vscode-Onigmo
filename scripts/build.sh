@@ -2,7 +2,7 @@
 
 emcc -O2 \
     deps/Onigmo/.libs/libonig.so \
-    onig.cc \
+    src/onig.cc \
     -Isrc -Ideps/Onigmo \
     -o out/onig.js \
     -s ENVIRONMENT=shell \
