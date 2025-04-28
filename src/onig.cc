@@ -80,7 +80,7 @@ typedef struct OnigRegExp_ {
 } OnigRegExp;
 
 typedef struct OnigScanner_ {
-  OnigRegSet* rset;
+//   OnigRegSet* rset;
   OnigRegExp** regexes;
   int count;
 } OnigScanner;
@@ -210,7 +210,7 @@ int createOnigScanner(unsigned char** patterns, int* lengths, int count, int opt
   int i, j;
   OnigRegExp** regexes;
   regex_t** regs;
-  OnigRegSet* rset;
+//   OnigRegSet* rset;
   OnigScanner* scanner;
 
   regexes = (OnigRegExp**)malloc(sizeof(OnigRegExp*) * count);
@@ -232,11 +232,11 @@ int createOnigScanner(unsigned char** patterns, int* lengths, int count, int opt
     }
   }
 
-  onig_regset_new(&rset, count, regs);
+//   onig_regset_new(&rset, count, regs);
   free(regs);
 
   scanner = (OnigScanner*)malloc(sizeof(OnigScanner));
-  scanner->rset = rset;
+//   scanner->rset = rset;
   scanner->regexes = regexes;
   scanner->count = count;
   return (int)scanner;
@@ -249,7 +249,7 @@ int freeOnigScanner(OnigScanner* scanner) {
     freeOnigRegExp(scanner->regexes[i]);
   }
   free(scanner->regexes);
-  onig_regset_free(scanner->rset);
+//   onig_regset_free(scanner->rset);
   free(scanner);
   return 0;
 }
@@ -263,15 +263,15 @@ int findNextOnigScannerMatch(OnigScanner* scanner, int strCacheId, unsigned char
   int i;
   int location;
 
-  if (strLength < 1000) {
-    // for short strings, it is better to use the RegSet API, but for longer strings caching pays off
-    bestResultIndex = onig_regset_search(scanner->rset, strData, strData + strLength, strData + position, strData + strLength,
-                                         ONIG_REGSET_POSITION_LEAD, options, &bestLocation);
-    if (bestResultIndex < 0) {
-      return 0;
-    }
-    return encodeOnigRegion(onig_regset_get_region(scanner->rset, bestResultIndex), bestResultIndex);
-  }
+//   if (strLength < 1000) {
+//     // for short strings, it is better to use the RegSet API, but for longer strings caching pays off
+//     bestResultIndex = onig_regset_search(scanner->rset, strData, strData + strLength, strData + position, strData + strLength,
+//                                          ONIG_REGSET_POSITION_LEAD, options, &bestLocation);
+//     if (bestResultIndex < 0) {
+//       return 0;
+//     }
+//     return encodeOnigRegion(onig_regset_get_region(scanner->rset, bestResultIndex), bestResultIndex);
+//   }
 
   for (i = 0; i < scanner->count; i++) {
     result = searchOnigRegExp(scanner->regexes[i], strCacheId, strData, strLength, position, options);
