@@ -30,9 +30,8 @@ jobs:
           git config --global user.name "RedCMD"
           git config --global user.email "theredcmd@gmail.com"
 
-      - name: Commit .wasm file # make it public
+      - name: Commit release files # make it public
         run: | #shell
-          node ./scripts/cp ./release/onig.wasm ./Onigmo.wasm
-          git add Onigmo.wasm
-          git diff-index --quiet HEAD || git commit -m "Update Onigmo.wasm"
+          git add release
+          git diff-index --quiet HEAD || git commit -m "Update release files"
           git push
