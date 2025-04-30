@@ -29,8 +29,7 @@ jobs:
         run: | # shell
           git config --global user.name "RedCMD"
           git config --global user.email "theredcmd@gmail.com"
-          git add .
-          git diff-index --quiet HEAD || git commit -m "Sync Github Actions"
+          git reset --hard HEAD
 
       - name: Commit release files # make it public
         run: | #shell
