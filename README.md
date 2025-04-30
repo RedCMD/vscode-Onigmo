@@ -1,11 +1,11 @@
-# VS Code Oniguruma
+# VS Code Onigmo
 
-Oniguruma bindings for VS Code. This library is used in VS Code and is not intended to grow to have general Oniguruma WASM bindings.
+Onigmo bindings for VS Code. This library is used in VS Code and is not intended to grow to have general Onigmo WASM bindings.
 
 ## Installing
 
 ```sh
-npm install vscode-oniguruma
+npm install vscode-onigmo
 ```
 
 ## API doc
