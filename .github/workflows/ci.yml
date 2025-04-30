@@ -15,6 +15,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '18.x'
+
+      - name: Setup Github Actions # allow use of `git push`
+        run: | # shell
+          git config --global user.name "RedCMD"
+          git config --global user.email "theredcmd@gmail.com"
+          git reset --hard HEAD
+
       - run: ./build/setup-emsdk.sh
       - run: echo "/opt/dev/emsdk/upstream/emscripten" >> $GITHUB_PATH
       - run: echo "/opt/dev/emsdk" >> $GITHUB_PATH
@@ -24,12 +31,6 @@ jobs:
       - run: npm run build-tsc
       - run: npm run package
       - run: npm test
-
-      - name: Setup Github Actions # allow use of `git push`
-        run: | # shell
-          git config --global user.name "RedCMD"
-          git config --global user.email "theredcmd@gmail.com"
-          git reset --hard HEAD
 
       - name: Commit release files # make it public
         run: | #shell
