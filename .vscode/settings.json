@@ -4,6 +4,9 @@
 	"[cpp]": {
 		"editor.insertSpaces": true
 	},
+	"[markdown]": {
+		"files.trimTrailingWhitespace": false
+	},
 	"git.branchProtection": ["main", "release/*"],
 	"git.branchProtectionPrompt": "alwaysCommitToNewBranch",
 	"git.branchRandomName.enable": true
