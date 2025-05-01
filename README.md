@@ -4,11 +4,14 @@ This [repo](https://github.com/RedCMD/vscode-Onigmo) is a fork of [vscode-onigur
 [TextMate 2.0](https://macromates.com/) uses [Onigmo](https://github.com/textmate/Onigmo/tree/Onigmo-5.13.5) for its regex engine.  
 Onigmo is a modded version of oniguruma.  
 [textmate/Onigmo](https://github.com/textmate/Onigmo) is a fork of [k-takata/Onigmo](https://github.com/k-takata/Onigmo) is a fork of [kkos/oniguruma](https://github.com/kkos/oniguruma).  
+
 A few lines have been commented out in [onig.cc](/src/onig.cc).  
 The `FindOption` `NotBeginPosition`, `NotBeginString` and `NotEndString` do not work.  
 The faster `RegSet` API does not seem to exist in Onigmo.  
 The updated [main.js](/release/main.js) and [onig.wasm](/release/onig.wasm) Onigmo files are located in the [release](/release/) folder.  
 Onigmo keeps its `.c` files in the root directory, unlike oniguruma which keeps them in `./src`.  
+
+This package is used in my VSCode TextMate extension https://marketplace.visualstudio.com/items?itemName=RedCMD.tmlanguage-syntax-highlighter  
 
 Onigmo bindings for VSCode. This library can be used in VSCode and is not intended to grow to have general Onigmo WASM bindings.
 
