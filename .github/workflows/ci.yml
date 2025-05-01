@@ -21,6 +21,8 @@ jobs:
           git config --global user.name "RedCMD"
           git config --global user.email "theredcmd@gmail.com"
           git reset --hard HEAD
+          git submodule init
+          git submodule update
 
       - run: ./build/setup-emsdk.sh
       - run: echo "/opt/dev/emsdk/upstream/emscripten" >> $GITHUB_PATH
@@ -34,6 +36,6 @@ jobs:
 
       - name: Commit release files # make it public
         run: | #shell
-          git add release
+          git add .
           git diff-index --quiet HEAD || git commit -m "Update release files"
           git push
