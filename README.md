@@ -8,7 +8,7 @@ Onigmo is a modded version of oniguruma.
 A few lines have been commented out in [onig.cc](/src/onig.cc).  
 The `FindOption` `NotBeginPosition`, `NotBeginString` and `NotEndString` do not work.  
 The faster `RegSet` API does not seem to exist in Onigmo.  
-The updated [main.js](/release/main.js) and [onig.wasm](/release/onig.wasm) Onigmo files are located in the [release](/release/) folder.  
+The updated [main.js](/release/main.js) and [onigmo.wasm](/release/onigmo.wasm) Onigmo files are located in the [release](/release/) folder.  
 Onigmo keeps its `.c` files in the root directory, unlike oniguruma which keeps them in `./src`.  
 
 This package is used in my VSCode TextMate extension https://marketplace.visualstudio.com/items?itemName=RedCMD.tmlanguage-syntax-highlighter  
