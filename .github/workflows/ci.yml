@@ -7,18 +7,20 @@ on:
     branches:
       - Onigmo
   workflow_dispatch:
+permissions: {}
 jobs:
   build:
     name: 'Builds and Compiles'
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
+          persist-credentials: false
           submodules: true
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
-          node-version: '18.x'
+          node-version: '22.x'
 
       - name: Setup Github Actions # allow use of `git push`
         run: | # shell
