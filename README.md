@@ -20,7 +20,6 @@ Onigmo bindings for VSCode. This library can be used in VSCode and is not intend
 ```sh
 npm install vscode-onigmo
 ```
-`vscode-onigmo` is let to be published to npm
 
 ## API doc
 
