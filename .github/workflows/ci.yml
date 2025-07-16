@@ -1,7 +1,11 @@
 name: 'CI'
 on:
   push:
+    branches:
+      - Onigmo
   pull_request:
+    branches:
+      - Onigmo
   workflow_dispatch:
 jobs:
   build:
