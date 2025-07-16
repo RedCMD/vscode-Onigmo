@@ -41,5 +41,4 @@ jobs:
       - name: Commit release files # make it public
         run: | #shell
           git add .
-          git diff-index --quiet HEAD || git commit -m "Update release files"
-          git push
+          git diff-index --quiet HEAD || (git commit -m "Update release files" && git push)
